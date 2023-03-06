@@ -1,0 +1,387 @@
+.App {
+  text-align: center;
+}
+
+.App-logo{
+  height:15%;
+  width: 15%;
+  float:center;
+
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width:70%;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.Authors p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Style the buttons */
+button {
+  background-color: #00b8d4; /* Blue */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: #0095c8; /* Darker blue on hover */
+}
+
+
+/* Style the input field */
+input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #00b8d4; /* Blue */
+}
+.more-links {
+  display: none;
+}
+
+li a:hover ul {
+  display: block;
+}
+
+li ul {
+  
+  display: block;}
+  .Papers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color:#fff;
+  }
+    li:hover {
+  cursor: pointer;
+}
+  .Papers h2 {
+    margin: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .Papers div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .Papers p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .Papers p strong {
+    font-weight: 600;
+  }
+  
+  .Papers p a {
+    color: #333;
+    text-decoration: none;
+  }
+ .light .Pa {
+    color: rgb(49, 32, 32);
+    text-decoration: none;
+
+  }
+  .dark .Pa {
+    color: #333;
+    text-decoration: none;
+
+  }
+  .dark .pw{
+    color:white;
+  }
+  .light .pw {
+    color:black;
+    
+  }
+  .button{
+    float:center;
+  }
+  
+  .Papers p a:hover {
+    color: #0070f3;
+  }
+  .select {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .select option {
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .select:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+    /* Style the heading elements */
+    .Paperss {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin: 20px auto;
+      
+     
+     
+
+      
+    }
+  
+    
+    
+    .Paperss h2 {
+      margin: 10px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      color:rgba(21, 20, 20, 0.862);
+    }
+    
+    .Paperss div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .Paperss p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      color:black;
+    }
+    
+    .Paperss p strong {
+      font-weight: 600;
+    }
+    
+    .Paperss p a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .Paperss p a:hover {
+      color: #0070f3;
+    }
+  .Adm{
+    height: 70vh;
+   
+  }
+    .light {
+      /* Light mode styles go here */
+      background-color: rgb(235, 235, 235);
+      color: black;
+       /* Add some padding to the parent page */
+       padding: 20px;
+       
+        /* Add some responsive styles */
+        @media (max-width: 768px) {
+          /* On small screens, make the parent page full width */
+          width: 100%;
+          
+        }
+      
+    }
+    .author-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .author {
+      width: 100%;
+      border: 1px solid rgb(181, 181, 181);
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 2px 2px 5px rgba(125, 125, 125, 0.788);
+    } 
+    .Authors h2 {
+      font-size: 0.8em;
+  text-align:center;
+    }  
+    
+    .au{
+      size: 20px;
+      
+    }     
+    
+    .dark {
+       /* Add some padding to the parent page */
+       padding: 20px;
+      
+       /* Set the font and text color */
+       color: #fff;
+       font-family: Arial, sans-serif;
+     
+       /* Set the background color and add a box shadow */
+       background-color: #444;
+       box-shadow: 0 2px 4px rgba(255, 244, 244, 0.1);
+     
+       /* Add some responsive styles */
+       @media (max-width: 768px) {
+         /* On small screens, make the parent page full width */
+         width: 100%;
+       }
+       
+
+       
+    }
+    .growInput {
+      width: 100%;
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+    .growInputs {
+      width: 100%;
+    }
+    
+    
+    
+    @media (max-width: 600px) {
+      .growInput {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+    @media (max-width: 800px) {
+      header {
+        font-size: 1em;
+        padding: 10px;
+      }
+    }
+    @media (max-width: 800px) {
+      header {
+        display: block;
+      }
+    }
+    
+   
+    
+ 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
