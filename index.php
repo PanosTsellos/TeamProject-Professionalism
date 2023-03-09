@@ -34,6 +34,9 @@ if (!in_array($_SERVER['REQUEST_METHOD'], array("GET", "POST"))){
             case '/':
                 $endpoint = new Home();
                 break;
+                case '/activities':
+                    $endpoint = new Activities();
+                    break;
             default:
                 $endpoint = new ClientError("Path not found: " . $path, 404);
         }

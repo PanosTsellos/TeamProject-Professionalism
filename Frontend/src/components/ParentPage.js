@@ -1,24 +1,15 @@
 import React from 'react';
-
+import Navbar from './NavBar';
 const ParentPage = (props) => {
   return (
     <div className="ParentPage">
       <header>
-        <h1>International Centre for Connected Construction (IC3)</h1>
+        
+        < Navbar/>
         <br></br>
-        <p>A centre of excellence for innovation in the global construction sector.</p>
-        <nav>
-          <ul>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </nav>
-       
+        
       </header>
-      
+
 
       {props.children}
 
