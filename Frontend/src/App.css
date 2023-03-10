@@ -385,4 +385,13 @@ form button:hover {
     grid-column: 1/2;
   }
 }
+.Data a:hover{
+  color:black;
+}
+.Data a{
+  color:white;
+}
+footer{
+  background-color: black;
+}
 
