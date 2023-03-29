@@ -37,6 +37,43 @@ if (!in_array($_SERVER['REQUEST_METHOD'], array("GET", "POST"))){
                 case '/activities':
                     $endpoint = new Activities();
                     break;
+                    case '/projects':
+                        $endpoint = new Projects();
+                        break;
+                        case '/projects_text':
+                            $endpoint = new Projects_Text();
+                            break;
+                            case '/demonstrators_text':
+                                $endpoint = new Demonstrators_Text();
+                                break;
+                                case '/demonstrators_projects':
+                                    $endpoint = new  Demonstrators_Projects();
+                                    break;
+                                    case'/updateprojectext':
+                                        $endpoint = new UpdateProjectText();
+                                        break;
+                                        case'/updatetext':
+                                            $endpoint = new UpdateText();
+                                            break;
+                                            case'/insertprojecttext':
+                                                $endpoint = new InsertProjectText();
+                                                break;
+                                                case'/demonstratorsprojecttext':
+                                                    $endpoint = new InsertDemonstratorsText();
+                                                    break;
+                                                    case'/deleteprojecttext':
+                                                        $endpoint = new DeleteProjectText();
+                                                        break;
+                                                        case'/insertproject':
+                                                            $endpoint = new InsertProject();
+                                                            break;
+    
+
+
+                               
+
+                        
+                                break;
             default:
                 $endpoint = new ClientError("Path not found: " . $path, 404);
         }

@@ -5,11 +5,19 @@ import Activities from './components/Activities';
 import HomePage from './components/HomePage';
 import { useLocation } from 'react-router-dom';
 import ContactUs from './components/contactus';
+import Projects from './components/Projects';
+import ShowProject from './components/ShowProject';
+import Demonstrators from './components/Demonstrators';
+import AdminProjects from './components/AdminProjects';
 
 
 function App() {
   const [text, setText] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
+const [project_text, setProject_Text] = useState([]);
+const [isLoadingProject, setIsLoadingProject] = useState(true);
+const [demonstrators_text, setDemonstrators] = useState([]);
+const [isLoadingDemonstrators, setIsLoadingDemonstrators] = useState(true);
 
 useEffect(() => {
   setIsLoading(true);
@@ -21,6 +29,29 @@ useEffect(() => {
     })
     .catch((error) => console.error(error));
 }, []);
+useEffect(() => {
+  setIsLoading(true);
+  fetch('http://unn-w20015975.newnumyspace.co.uk/tpp/demonstrators_text')
+    .then((response) => response.json())
+    .then((data) => {
+      setDemonstrators(data);
+      setIsLoadingDemonstrators(false);
+    })
+    .catch((error) => console.error(error));
+}, []);
+
+
+useEffect(() => {
+  setIsLoadingProject(true);
+  fetch('http://unn-w20015975.newnumyspace.co.uk/tpp/projects_text')
+    .then((response) => response.json())
+    .then((data) => {
+      setProject_Text(data);
+      setIsLoadingProject(false);
+    })
+    .catch((error) => console.error(error));
+}, []);
+
 
  
   return (
@@ -30,6 +61,10 @@ useEffect(() => {
         <Route path="/" element={<HomePage  />} />
         <Route path="/activities" element={<Activities text={text} loading={isLoading}/>}/>
         <Route path="/contactus" element={<ContactUs />}/>
+        <Route path="/showproject/:ids" element={<ShowProject  />} />
+        <Route path="/projects" element={<Projects  text={project_text} loading={isLoadingProject}/>}/>
+        <Route path="/adminprojects" element={<AdminProjects  text={project_text} loading={isLoadingProject}/>}/>
+        <Route path="/demonstrators" element={<Demonstrators  text={demonstrators_text} loading={isLoadingDemonstrators}/>}/>
         <Route path="*" element={<p>Not Found</p>} />
       </Routes>
     </div>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import ic3Image from './ic3partners.png';
 import {
   Box,
   Container,
@@ -11,14 +12,19 @@ import {
   
 const Footer = () => {
   return (
+    
     <Box >
+      
       <h1 style={{ color: "white", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         IC3
       </h1>
+      
       <Container>
+      
         <Row>
+          
           <Column>
             <Heading>About Us</Heading>
             <FooterLink href="#">Aim</FooterLink>
