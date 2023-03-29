@@ -100,6 +100,8 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   background: black;
+  overflow-y: hidden;
+  
 }
 
 .Navbar > .nav-logo {
@@ -107,6 +109,8 @@ form button:hover {
   font-size: 21px;
   margin: 15px;
   color: #ffffff;
+  overflow-y: hidden;
+
 }
 
 .Navbar > .nav-items > a {
@@ -116,6 +120,8 @@ form button:hover {
   margin: 15px;
   position: relative;
   opacity: 0.9;
+  overflow-y: hidden;
+
 }
 
 .Navbar > .nav-items > a:hover {
@@ -140,11 +146,21 @@ form button:hover {
 
 .Navbar > .nav-toggle {
   display: none;
-  
+
+
+
 }
 
 @media (max-width: 700px) {
+
+  .Navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
   .Navbar > .nav-items {
+    overflow-y: hidden;
     position: absolute;
     top: 60px;
     display: flex;
@@ -165,8 +181,9 @@ form button:hover {
 
   .Navbar > .nav-items.open {
       transform: translateX(0);
-  }
 
+  }
+/*x*/
   .Navbar > .nav-toggle {
     display: flex;
     width: 50px;
@@ -174,6 +191,7 @@ form button:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
   }
 
   .nav-toggle > .bar {
@@ -251,6 +269,13 @@ form button:hover {
   
  
 }
+
+.my-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 .grid-item button{
   width: 100%;
@@ -417,9 +442,288 @@ footer{
 .message h2 {
   font-size: 24px;
 }
+/*Education css*/
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f6f6f6;
+}
+
+.education__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b87820;
+}
+
+.education__logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.education__paragraph {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.education__paragraph p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333333;
+  white-space: break-spaces;
+}
+
+.education__paragraph p span {
+  display: inline-block;
+}
+
+.education_bck {
+  background-image: url('./img/bck.png');
+  background-size: cover;
+  background-position: center center;
+  padding: 80px;
+  color: white;
+}
+
+.education.animated .education__title {
+  font-size: 24px;
+  transition: all 0.5s ease-in-out;
+}
+
+.animate-text {
+  font-size: 28px;
+  transition: font-size 0.5s ease-in-out;
+}
+
+.education.animated .education__logo {
+  width: 100px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.education.animated .education__paragraph p {
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #576eb3;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top-button.visible {
+  opacity: 1;
+}
+
+/*dropdown education*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__button {
+  background-color: #f9f9f9;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown__list {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown__list li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown__list li:last-child {
+  border-bottom: none;
+}
+
+.dropdown__list a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown__list a:hover {
+  color: #fff;
+  background-color: #333;
+}
+.dropdown:hover .dropdown__list {
+  display: block;
+}
+
+.dropdown__list:hover {
+  display: block;
+}
+
+/*Loading animation*/
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-screen__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-screen__logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/*Delete button events admin*/
+.delete-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background-color: #d33;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c22;
+}
+
+/*css for the admin events image fixture*/
+.Data {
+  font-size: 1.2rem;
+}
+
+.search-bar input {
+  font-size: 1rem;
+}
+
+.add-event button,
+.add-event input[type="text"],
+.add-event button[type="submit"],
+.add-event button[type="button"],
+.add-event p {
+  font-size: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.grid-item p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.grid-item .small_btn {
+  font-size: 1rem;
+}
+
+.grid-item .delete-btn {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .Data {
+    font-size: 1rem;
+  }
+
+  .grid-item p {
+    font-size: 1rem;
+  }
+}
+
+/*admin education*/
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  resize: vertical; /* Make the input box resizable vertically */
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+
+}
 
 .loading {
   display: flex;
+
   align-items: center;
   justify-content: center;
   font-size: 24px;
@@ -1122,3 +1426,37 @@ text-decoration: underline;
     }
   }
   
+
+.loading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading-screen img {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+.textarea {
+  height: 550px;
+  width: 950px;
+}
+
+

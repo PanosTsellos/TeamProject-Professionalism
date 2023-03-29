@@ -2,13 +2,18 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Activities from './components/Activities';
+import Events from './components/events';
 import HomePage from './components/HomePage';
+import AdminEvents from './components/adminevents';
 import { useLocation } from 'react-router-dom';
 import ContactUs from './components/contactus';
 import Projects from './components/Projects';
 import ShowProject from './components/ShowProject';
 import Demonstrators from './components/Demonstrators';
 import AdminProjects from './components/AdminProjects';
+import Education from './components/education';
+import AdminEducation from './components/admineducation';
+
 
 
 function App() {
@@ -53,13 +58,17 @@ useEffect(() => {
 }, []);
 
 
- 
+
   return (
     <div className="App">
     
       <Routes>
         <Route path="/" element={<HomePage  />} />
+        <Route path="/adminevents" element={<AdminEvents />}/>
+        <Route path="/admineducation" element={<AdminEducation />}/>
         <Route path="/activities" element={<Activities text={text} loading={isLoading}/>}/>
+        <Route path="/events" element={<Events />}/>
+        <Route path="/education" element={<Education />}/>
         <Route path="/contactus" element={<ContactUs />}/>
         <Route path="/showproject/:ids" element={<ShowProject  />} />
         <Route path="/projects" element={<Projects  text={project_text} loading={isLoadingProject}/>}/>
