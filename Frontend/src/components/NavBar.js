@@ -16,6 +16,7 @@ const Navbar = () => {
         <a href="#resources">Resources</a>
         <a href="#community">Community</a>
         <a href="/events">Events</a>
+        <a href="/education">Education</a>
         <a href="#about">About</a>
         <a href="/contactus">Contact</a>
       </div>
